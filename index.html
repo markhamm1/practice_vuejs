@@ -12,9 +12,18 @@
       <h2>{{ message }}</h2>
       <p>{{ firstName }}</p>
       <p>{{ lastName }}</p>
+      <p>{{ sports }}</p>
 
       <button v-on:click="changeMessage()">Click Here!</button>
       <p>Enter your name: <input type="text" v-model="firstName"></p>
+      <p><button v-on:click="toggleInfo()">Toggle Info</button></p>
+      <p v-if="info">All the other information!</p>
+      <br>
+      <div v-for="sport in sports">
+        A sport I like is: {{ sport }}
+      </div>
+      <p>Add other sports: <input type="text" v-model="additionalSport"></p>
+      <p><button v-on:click="addSport()">Add Sport</button></p>
     </div>
   </body>
 </html>
