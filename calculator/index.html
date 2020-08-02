@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <h1>Welcome to the Calculator</h1>
+    <div id="app">
+      <h3>Add These Numbers:</h3>
+      <p>Enter 1st number:  <input type="text" v-model="number1"></p>
+      <p>Enter 2nd number: <input type="text" v-model="number2"></p>
+      <p>Enter 3rd number:  <input type="text" v-model="number3"></p>
+
+      <button v-on:click="calculateSum()">Calulate Sum</button>
+      <p>The sum is: {{ sum }}</p>
+
+      <h3>Multiply These Numbers:</h3>
+      <p>Enter 1st number: <input type="text" v-model="number4"></p>
+      <p>Enter 2nd number: <input type="text" v-model="number5"></p>
+      <button v-on:click="calculateProduct()">Multiply</button>
+      <p>The Product is: {{ product }}</p>
+    </div>
+  </body>
+</html>
